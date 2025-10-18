@@ -1,0 +1,29 @@
+# === Descriptive Statistics ===
+print("\n📈 Descriptive Statistics:")
+display(df.describe(include='all'))
+
+# === Visualization 1: Trends over time ===
+plt.figure(figsize=(10,6))
+df.groupby('month')['passengers'].sum().plot(kind='line', marker='o')
+plt.title("Total Passengers per Month")
+plt.xlabel("Month")
+plt.ylabel("Passengers")
+plt.grid(True)
+plt.show()
+
+# === Visualization 2: Transport Mode Comparison ===
+if 'mode' in df.columns:
+    df.groupby('mode')['passengers'].sum().sort_values().plot(kind='barh', figsize=(8,5))
+    plt.title("Total Passengers by Transport Mode")
+    plt.xlabel("Passengers")
+    plt.ylabel("Mode of Transport")
+    plt.show()
+
+# === Visualization 3: Seasonal Variability ===
+if 'month' in df.columns:
+    df.boxplot(column='passengers', by='month', figsize=(10,6))
+    plt.title("Passenger Distribution by Month (Seasonality)")
+    plt.suptitle("")
+    plt.xlabel("Month")
+    plt.ylabel("Passengers")
+    plt.show()
