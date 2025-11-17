@@ -14,3 +14,7 @@ US Border Crossing Data: https://www.kaggle.com/datasets/divyansh22/us-border-cr
 - `/notebooks/` – Python Jupyter Notebooks
 - `/simulation/` – AnyLogic models (.alp files)
 - `/docs/` – Reports, slides, and instructions
+
+## Part 3 Summary
+
+For our project, we chose option B, the Python/AI modeling. Our biggest challenge in this part was getting our predictive models to be both precise and accurate. We were unable to do that due to the data having some issues. We utilized ChatGPT to correct our coding mistakes, along with steer us in the right direction.
